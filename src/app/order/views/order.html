@@ -1,0 +1,54 @@
+
+<div class="row">
+	<form ng-submit="findOrder(recordNumber)">
+		<div class="col-md-4">
+			<div class="input-group">
+				<input class="form-control" type="number" placeholder="No. Comanda" ng-model="recordNumber"/>
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="submit" ng-disabled="!recordNumber">Buscar</button>
+				</span>
+			</div>
+		</div>
+		<div class="col-md-6" ng-show="order">
+			<strong>Cliente:</strong> {{order.client.name}}<br/>
+			<strong>CPF:</strong> {{order.client.cpf}}<br/>
+		</div>
+	</form>
+</div>
+
+<div class="row" ng-show="order">
+	<hr>
+
+	<form ng-submit="addItem(recordNumber)">
+		<div class="col-md-12">
+			<div class="input-group">
+				<input class="form-control" type="number" placeholder="Cód. Item" ng-model="itemId"/>
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="submit" ng-disabled="!itemId">Add</button>
+				</span>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="row" ng-show="order">
+	<hr>
+	<div class="col-md-12">
+		<table class="table table-striped">
+			<thead>
+		  		<tr>
+		    		<th>Cód.</th>
+		    		<th>Produto</th>
+		    		<th>Valor</th>
+		  		</tr>
+			</thead>
+		    <tbody>
+				<tr ng-repeat="item in order.items">
+		        	<td>{{item.id}}</td>
+		        	<td>{{item.description}}</td>
+		    		<td>{{item.price}}</td>
+		      	</tr>
+		  	<tbody>
+		</table>
+	</div>
+</div>

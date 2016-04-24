@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="newOrder">
+  <head>
+    <meta charset="utf-8"/>
+    <title>newOrder</title>
+    <!-- inject:vendor:css -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/styles/bootstrap.css">
+    <link rel="stylesheet" href="/css/todo/todo.css">
+    <!-- endinject -->
+  </head>
+  <body>
+    <h1>New Order System</h1>
+    <hr/>
+    <ng-view></ng-view>
+    <!-- inject:vendor:js -->
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-route/angular-route.js"></script>
+    <script src="/angular-route-segment/build/angular-route-segment.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/order/order.js"></script>
+    <script src="/order/services/order-service.js"></script>
+    <script src="/order/controllers/order-controller.js"></script>
+    <script src="/todo/todo.js"></script>
+    <script src="/todo/todo-controller.js"></script>
+    <script src="/app.js"></script>
+    <script src="/new-order-templates.js"></script>
+    <!-- endinject -->
+  </body>
+</html>
